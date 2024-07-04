@@ -11,7 +11,7 @@ def get_salary_prediction(job_description, api_url):
         return None
 
 # API-URL
-api_url = "http://0.0.0.0:8080"
+api_url = "https://salary-ranges-api-zk7itojyoa-ew.a.run.app"
 
 # Seitenlayout
 st.set_page_config(
