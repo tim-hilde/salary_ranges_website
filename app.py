@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 
+# API-URL
+api_url = "https://salary-ranges-api-zk7itojyoa-ew.a.run.app"
+
 # Funktion zur Vorhersage des Gehaltsbereichs
 def get_salary_prediction(job_description, api_url):
     params = {"input": job_description}
@@ -9,9 +12,6 @@ def get_salary_prediction(job_description, api_url):
         return response.json()
     else:
         return None
-
-# API-URL
-api_url = "https://salary-ranges-api-zk7itojyoa-ew.a.run.app"
 
 # Seitenlayout
 st.set_page_config(
@@ -69,3 +69,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# for waking the gcp
+requests.get(api_url)
