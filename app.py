@@ -72,3 +72,4 @@ st.markdown(
 
 # for waking the gcp
 requests.get(api_url)
+print("Woke gcp")
